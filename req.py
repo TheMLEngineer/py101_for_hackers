@@ -16,3 +16,13 @@ print(x.elapsed)
 print(x.cookies)
 
 x = requests.get("http://httpbin.org/get", params={"id":'1'})
+print(x.url)
+
+x = requests.get("http://httpbin.org/get", params={"id":'3'}, headers = {'Acceopt':'application/json'})
+print(x.text)
+
+x = requests.delete("http://httpbin.org/delete")
+priknt(x.text)
+
+x = requests.post("http://httpbin.org/post",data = {'a':'b'})
+print(x.text)
