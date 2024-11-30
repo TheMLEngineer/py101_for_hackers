@@ -33,3 +33,13 @@ files = {'file': open('google.png','rb')}
 
 x = requests.post("http://httpbin.org/post",files = files)
 print(x.text)
+
+x = requests.get("http://httpbin.org/get", auth=('username','password'))
+print(x.text)
+
+"""
+(venv) ┌─[✗]─[user@parrot]─[~/Documents/TCM/py101_for_hackers]
+└──╼ $echo -ne dXNlcm5hbWU6cGFzc3dvcmQ= | base64 -d
+username:password(venv) ┌─[user@parrot]─[~/Documents/TCM/py101_for_hackers]
+└──╼ $
+"""
