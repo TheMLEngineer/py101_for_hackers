@@ -43,3 +43,17 @@ print(x.text)
 username:password(venv) ┌─[user@parrot]─[~/Documents/TCM/py101_for_hackers]
 └──╼ $
 """
+
+
+"""
+x = requests.get('https://expired.badssl.com')
+print(x)
+
+requests.exceptions.SSLError: HTTPSConnectionPool(host='expired.badssl.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:992)')))
+"""
+
+x = requests.get('https://expired.badssl.com',verify=False)
+print(x)
+
+x = requests.get('https://github.com')
+print(x.headers)
