@@ -26,3 +26,10 @@ print(x.text)
 
 x = requests.post("http://httpbin.org/post",data = {'a':'b'})
 print(x.text)
+
+# adding image as part of post
+
+files = {'file': open('google.png','rb')}
+
+x = requests.post("http://httpbin.org/post",files = files)
+print(x.text)
