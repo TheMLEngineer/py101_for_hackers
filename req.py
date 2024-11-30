@@ -57,3 +57,14 @@ print(x)
 
 x = requests.get('https://github.com')
 print(x.headers)
+
+x = requests.get('https://github.com',timeout = 3)
+print(x.text)
+
+x = requests.get("http://httpbin.org/cookies")
+print(x.content)
+
+
+x = requests.Session()
+x.cookies.update({'a':'b'})
+print(x.get("http://httpbin.org/cookies").text)
