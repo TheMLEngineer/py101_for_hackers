@@ -22,7 +22,7 @@ x = requests.get("http://httpbin.org/get", params={"id":'3'}, headers = {'Acceop
 print(x.text)
 
 x = requests.delete("http://httpbin.org/delete")
-priknt(x.text)
+print(x.text)
 
 x = requests.post("http://httpbin.org/post",data = {'a':'b'})
 print(x.text)
