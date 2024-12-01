@@ -24,6 +24,15 @@ for password in password_list:
 
 
 """
+
+SERVICES TO START :
+
+sudo service ssh start  # For systemd systems
+# or
+sudo systemctl start ssh  # Also for systemd systems
+# or if not systemd:
+sudo /etc/init.d/ssh start
+
 OUTPUT :
 
 (venv) ┌─[user@parrot]─[~/Documents/TCM/py101_for_hackers]
