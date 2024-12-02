@@ -17,4 +17,5 @@ with log.process(f"Attempting to back: {wanted_hash}!\n") as p:
         for password in password_list:
             password = password.strip('\n').encode('latin-1')
             password_hash = sha256sum(password)
+
             
